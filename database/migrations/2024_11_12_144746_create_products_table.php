@@ -10,11 +10,11 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('brand');
+            $table->string('brand'); 
             $table->string('name');
-            $table->decimal('price', 8, 2);
-            $table->text('description');
-            $table->file('images');
+            $table->decimal('price', 12, 2)->default(0.00);
+            $table->text('description'); 
+            // $table->file('images');
             $table->timestamps();
         });
     }
